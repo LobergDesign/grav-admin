@@ -1,7 +1,11 @@
 # Grav Specific
 .sass-cache
 composer.lock
+<<<<<<< HEAD
 cache/* 
+=======
+cache/*
+>>>>>>> origin/master
 assets/*
 logs/*
 images/*
@@ -12,4 +16,8 @@ user/data/*
 ehthumbs.db
 Icon?
 Thumbs.db
+<<<<<<< HEAD
 *.swp
+=======
+*.swp
+>>>>>>> origin/master
