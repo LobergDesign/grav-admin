@@ -1,0 +1,11 @@
+email: jeanloberg@hotmail.dk
+fullname: 'Jean Loberg Hansen'
+title: 'Frontend developer'
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$eb.Gl8lFBdC3TUbANQDF/us/pmA9uXK5mqgipnV66ow/Ym/tlVXdS
