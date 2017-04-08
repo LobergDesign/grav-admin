@@ -12,7 +12,7 @@ date_default_timezone_set('Europe/Rome');
 ignore_user_abort(true);
 set_time_limit(0);
 
-$repo          = '~/[git@github.com:LobergDesign/grav-admin.git]';
+$repo          = '~/[https://github.com/LobergDesign/grav-admin.git]';
 $branch        = 'master';
 $output        = array();
 
