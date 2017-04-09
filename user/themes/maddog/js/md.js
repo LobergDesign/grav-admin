@@ -5,13 +5,13 @@ $(window).load(function () {
 
 $(document).ready(function () {
 //burger menu
-    var classlist = $('header .logo, .menu-icon, .main-navigation');
+    var classlist = $('.main-navigation, .menu-icon p');
     var clickDelay = 0,
             clickDelayTimer = null;
 
-    $('#nav-icon4').on('click', function () {
+    $('.menu-icon').on('click', function () {
         if (clickDelayTimer === null) {
-            var $burger = $(this);
+            var $burger = $('#nav-icon4');
             $burger.toggleClass('active');
             $burger.parent().toggleClass('is-open');
             classlist.toggleClass('active');

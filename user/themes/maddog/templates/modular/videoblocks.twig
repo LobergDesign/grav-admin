@@ -1,0 +1,22 @@
+<div class="modular-row videoblocks {{ page.header.class}}">
+    {{ content }}
+    <div class="videoblocks-items">
+    {% for videoblocks in page.header.videoblocks %}
+           <div class="videoblocks">
+            {% if videoblocks.icon %}
+            <i class="fa fa-fw fa-{{ videoblocks.icon }}"></i>
+            <div class="videoblocks-content icon-offset">
+            {% else %}
+            <div class="videoblocks-content">
+            {% endif %}
+            {% if videoblocks.header %}
+            <h4>{{ videoblocks.header }}</h4>
+            {% endif %}
+            {% if videoblocks.text %}
+            <p>{{ videoblocks.text }}</p>
+            {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+</div>

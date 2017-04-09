@@ -1,5 +1,71 @@
 {% extends 'partials/base.html.twig' %}
 
+
+
+
+
+
+{% set collection = page.collection() %}
+
+
+
 {% block content %}
-	{{ page.content }}
+    {% include 'partials/frontpage_banner.html.twig' %}
+    <!--{{ page.title }}-->
+    <section>
+        <div class="main-wrapper">
+            <div class="container" id="down">
+                <div class="columns is-multiline is-mobile film-grid">
+                    <div class="column is-10 is-offset-1">
+                        <div class="intro-text">
+                            <h2>
+                                Together with our clients, we bring <div class="focus-text">clarity</div> to brands, products and environments to make them relevant. Simplicity drives <div class="focus-text">growth and purifies</div> any business. It changes the world.
+                            </h2>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="column is-12 show-content">
+                        <div class="img-container first cover" style="background-image: url('/grav-admin/user/pages/01.home/photography-1247097_1280_1.jpg');">
+                            <div class="img-overlay"></div>
+                        </div>
+                        <div class="desc">
+                            <p>Mad dog case film - 2016</p>
+                        </div>
+                    </div>
+          
+                   
+
+                    {% for page in collection %}
+                        <a href="{{page.url}}" class="column is-half show-content">
+                            <div class="image-effect">
+                                <div class="img-container cover" style="background-image: url('{% set image = page.media.images|first %}{{ image.url }}');">
+                                    <div class="img-overlay"></div>
+                                    <div class="grid-content">
+                                        <p>{{page.title}}</p>
+                                        <span>- Se video</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="desc">
+                                <p>Author  - titel of project</p>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
+                <div class="columns is-mobile">
+                    <div class="column is-half is-offset-one-quarter">
+                        <div class="lets-work-container">
+                            <span>Lets work together</span>
+                            <span class="last">Dont be a stranger</span>
+                            <a href="contact" class="btn">get in touch</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
 {% endblock %}
